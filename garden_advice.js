@@ -28,8 +28,20 @@ if (plantType === "flower") {
 // Log the generated advice to the console
 console.log(advice);
 
+// Suggest plants that thrive in the given season.
+// Plant suggestions database
+const seasonalPlants = {
+  summer: ["Agapanthus", "Hibiscus", "Bougainvillea"],
+  winter: ["Erica", "Strelitzia", "Snowdrops"],
+  spring: ["African Daisy", "Cape Honeysuckle", "Wild Iris"],
+  fall: ["Aloe Ferox", "Wild Dagga", "Plectranthus"],
+};
+
+// Display suggestions
+const suggestions = seasonalPlants[season] || ["No seasonal suggestions"];
+console.log(`\nTry these plants: ${suggestions.join(", ")}`);
+
 // TODO: Examples of possible features to add:
 // - Add detailed comments explaining each block of code.
 // - Refactor the code into functions for better readability and modularity.
-// - Store advice in an object for multiple plants and seasons.
-// - Suggest plants that thrive in the given season.
+// - Store advice in an object for multiple plants and seasons
